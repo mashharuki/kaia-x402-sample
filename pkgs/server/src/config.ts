@@ -1,27 +1,24 @@
 import { declareDiscoveryExtension } from "@x402/extensions/bazaar";
 import "dotenv/config";
 
+// chain id
+export const CHAIN_ID = "eip155:1001" as `${string}:${string}`
+
 // x402に関する設定
 export const x402Config = {
   "GET /weather": {
     accepts: [
       {
         scheme: "exact",
-        price: "$0.01",
-        network: "eip155:84532" as `${string}:${string}`, // Base Sepolia
-        payTo: process.env.EVM_ADDRESS as `0x${string}`,
-      },
-      {
-        scheme: "exact",
         price: {
-          amount: "10000",
-          asset: "0x66145f38cBAC35Ca6F1Dfb4914dF98F1614aeA88" as `0x${string}`,
+          amount: "10000000000000000000",
+          asset: "0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29" as `0x${string}`, // JPYC
           extra: {
-            name: "USDC",
-            version: "2",
+            name: "JPY Coin",
+            version: "1",
           },
         },
-        network: "eip155:4801" as `${string}:${string}`, // Worldchain Sepolia
+        network: CHAIN_ID as `${string}:${string}`, // Worldchain Sepolia
         payTo: process.env.EVM_ADDRESS as `0x${string}`,
       },
     ],

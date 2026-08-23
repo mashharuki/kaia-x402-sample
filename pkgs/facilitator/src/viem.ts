@@ -2,7 +2,7 @@ import { toFacilitatorEvmSigner } from "@x402/evm";
 import dotenv from "dotenv";
 import { type Chain, createWalletClient, http, publicActions } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
-import { baseSepolia, worldchainSepolia } from "viem/chains";
+import { kairos } from "viem/chains";
 
 dotenv.config();
 
@@ -27,14 +27,8 @@ console.info(`EVM Facilitator account: ${evmAccount.address}`);
 
 // chain info
 export const chainInfo = {
-  chain: worldchainSepolia,
-  chainId: "eip155:4801",
-};
-
-// baseSepolia
-export const baseSepoliaChainInfo = {
-  chain: baseSepolia,
-  chainId: "eip155:84532",
+  chain: kairos,
+  chainId: "eip155:1001",
 };
 
 /**

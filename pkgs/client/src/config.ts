@@ -7,13 +7,14 @@ import { signer } from "./viem";
 // Create x402 client and register EVM scheme
 const client = new x402Client();
 
-client.register("eip155:4801", new ExactEvmScheme(signer));
+client.register("eip155:1001", new ExactEvmScheme(signer));
 
+// デフォルト以外のアセットを指定する場合はここで指定する必要あり
 client.setSpendControls({
   allowedAssets: [
     {
-      network: "eip155:4801",
-      asset: "0x66145f38cBAC35Ca6F1Dfb4914dF98F1614aeA88",
+      network: "eip155:1001",
+      asset: "0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
     },
   ],
 });
