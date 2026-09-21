@@ -25,7 +25,7 @@ pnpm facilitator run dev
 Please check it
 
 ```bash
-curl http://localhost:4022/supported
+curl http://localhost:4022/supported | jq
 ```
 
 ```json
@@ -63,7 +63,7 @@ pnpm x402server run dev
 Please check it
 
 ```bash
-curl http://localhost:4021/health
+curl http://localhost:4021/health | jq
 ```
 
 3. run client script
