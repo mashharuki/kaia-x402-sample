@@ -106,6 +106,9 @@ importers:
       tsx:
         specifier: ^4.23.12
         version: 4.23.12
+      viem:
+        specifier: ^2.55.19
+        version: 2.55.19(typescript@7.0.2)(zod@3.25.76)
     devDependencies:
       '@types/node':
         specifier: ^26.2.0
@@ -1468,7 +1471,7 @@ snapshots:
 
   '@scure/bip32@1.7.0':
     dependencies:
-      '@noble/curves': 1.9.1
+      '@noble/curves': 1.9.7
       '@noble/hashes': 1.8.0
       '@scure/base': 1.2.6
 
