@@ -10,8 +10,8 @@ import { ExactEvmScheme } from "@x402/evm/exact/facilitator";
 import { UptoEvmScheme } from "@x402/evm/upto/facilitator";
 import dotenv from "dotenv";
 import { Hono } from "hono";
+import { chainInfo } from "./config.js";
 import {
-  chainInfo,
   getFacilitatorEvmSignerForChain,
   getViemClientForChain,
 } from "./viem.js";

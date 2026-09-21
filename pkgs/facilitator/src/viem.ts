@@ -2,7 +2,6 @@ import { toFacilitatorEvmSigner } from "@x402/evm";
 import dotenv from "dotenv";
 import { type Chain, createWalletClient, http, publicActions } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
-import { kairos } from "viem/chains";
 
 dotenv.config();
 
@@ -24,12 +23,6 @@ export const evmAccount = privateKeyToAccount(
 );
 
 console.info(`EVM Facilitator account: ${evmAccount.address}`);
-
-// chain info
-export const chainInfo = {
-  chain: kairos,
-  chainId: "eip155:1001",
-};
 
 /**
  * 指定したチェーンのVeim クライアントを返すメソッド
