@@ -9,7 +9,10 @@
     "check": "pnpm exec biome check --write .",
     "x402client": "pnpm --filter x402client",
     "x402server": "pnpm --filter x402server",
-    "facilitator": "pnpm --filter facilitator"
+    "facilitator": "pnpm --filter facilitator",
+    "setup": "sh ./scripts/setup.sh",
+    "start": "sh ./scripts/start.sh",
+    "stop": "sh ./scripts/stop.sh"
   },
   "keywords": [],
   "author": "",
